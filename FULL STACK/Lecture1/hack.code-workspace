@@ -1,0 +1,47 @@
+{
+	"folders": [
+		{
+			"path": "../../../hack"
+		},
+		{
+			"path": "../../../WEBDEV"
+		},
+		{
+			"path": "H:/DeepFakeVideoDetection"
+		},
+		{
+			"path": "../../../WEB_SEM4"
+		},
+		{
+			"path": "../../../JAVA"
+		},
+		{
+			"path": "../../../WEB_0502"
+		},
+		{
+			"path": "../../../Am"
+		},
+		{
+			"path": "../../../AISR"
+		},
+		{
+			"path": "../../../web_exam"
+		},
+		{
+			"path": "../../../tic_tac_toe"
+		},
+		{
+			"path": "../../../snake_2"
+		},
+		{
+			"path": "../../../Assignments"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "snake_2",
+		"liveServer.settings.port": 5501
+	}
+}
