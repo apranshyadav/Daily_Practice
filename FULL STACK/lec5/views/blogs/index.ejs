@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1><center>DISPLAYING BLOGSSSS</center></h1>
+
+    <% for (let item of blogs){ %>
+        <div>
+            <h2>ID : <%= item.id%> </h2>
+            <h3>AUTHOR : <%=item.author%> </h3>
+            <h3>COMMENT : <%=item.comment%> </h3>
+        </div>
+    <% } %>
+
+    <center><h1><a href="/blogs/new">NEW BLOG</a></h1></center>
+</body>
+</html>

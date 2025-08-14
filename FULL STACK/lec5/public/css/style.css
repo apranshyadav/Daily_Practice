@@ -1,0 +1,136 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* Container for each blog */
+div {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 600px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Blog ID */
+h2 {
+    font-size: 1.2rem;
+    color: #16a085;
+    margin-bottom: 10px;
+}
+
+/* Author and content styling */
+h3 {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #34495e;
+    margin: 5px 0;
+}
+
+h3:first-of-type {
+    font-weight: bold;
+    color: #2980b9;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #2c3e50;
+}
+
+form {
+    background: #ffffff;
+    padding: 28px 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    width: 360px;
+    animation: fadeIn 0.6s ease-out;
+}
+
+form h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #555;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: #fafafa;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #3b82f6;
+    background: #fff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59,130,246,0.15);
+}
+
+textarea {
+    resize: none;
+    height: 90px;
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 11px;
+    background: #3b82f6;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+}
+
+button:active {
+    background: #1d4ed8;
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
