@@ -1,68 +1,80 @@
 const express = require('express');
-const path = require('path');
 const app = express();
+const path = require('path');
 
-// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const blogs = [
+const blog = [
     {
         id: 1,
-        author: "Sunny Yaduvanshi",
-        comment: "kaise hai yeh TANN HIGH"
+        title: "Arjit",
+        content: "Aaj dekhenge Wednesday"
     },
     {
         id: 2,
-        author: "Uzzwal Moti ",
-        comment: "PAAAAAANI  PAAAAANI PAAAANI"
+        title: "Home",
+        content: "Chalo ghar chale"
     },
     {
         id: 3,
-        author: "DU",
-        comment: "AAAZAAADI AAAZAADI"
-    },
-    {
-        id: 4,
-        author: "RAO JI",
-        comment: "27 mein apni sarkaar"        
-    }]
-
-
-let password = 212212;
-app.use((req,res,next)=>{
-    if(password === 212212){
-        next();
+        title: "Placement",
+        content: "Level sabke niklenge"
     }
-    else{
-        res.send("Chal be katt le yaha se");
-    }
-})
+];
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.urlencoded({ extended: true }));
+//Body parsing middleware (body by defalut is undefined)
+app.use(express.urlencoded({ extended: true })); // Parse form data
 
-app.get('/', (req, res) => {
-    res.send('Welcome to root Route!');
+//Middleware
+// let password = 1800;
+// app.use('/blogs', (req, res, next) => {
+//     if (password==800){
+//         next();
+//     }else{
+//         res.send("Bhai Passwrod galat h, you are not allowed");
+//     }
+// })
+
+
+
+
+
+// Root Route
+app.get("/", (req, res) => {
+    res.send("Hello From root Route!");
 });
 
-app.get('/blogs', (req, res) => {
-    res.render('blogs/index', { blogs });
-});
+// CRUD Operations
 
+// CREATE Form - Display form to create a new blog
 app.get('/blogs/new', (req, res) => {
-    res.render('blogs/new');
+    res.render("blogs/new");
 });
 
+// CREATE - Create a new blog
 app.post('/blogs', (req, res) => {
-    let { author, comment } = req.body;
-    blogs.push({ id: blogs.length + 1 ,author, comment });
-    res.send("Blog created successfully!");
+    const { title, author, content } = req.body;
+    const newBlogPost = {
+        id: Date.now(),
+        title,
+        author,
+        content
+    };
+    blog.push(newBlogPost);
+    res.redirect('/blogs');
 });
 
 
-
+// READ - Get all blogs
+app.get('/blogs', (req, res) => {
+    res.render('blogs/index', { blog });
+});
 
 const PORT = 8080;
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+//middleware are function that are used to process the request and response objects
+// that executes oncec the request is intiatwd and you are about to reach the response
