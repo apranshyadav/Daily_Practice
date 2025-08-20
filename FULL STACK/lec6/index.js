@@ -1,84 +1,68 @@
 const express = require('express');
-const app = express();
 const path = require('path');
-
-const blog = [
-    {
-        id: 1,
-        title: "Arjit",
-        content: "Aaj dekhenge Wednesday"
-    },
-    {
-        id: 2,
-        title: "Home",
-        content: "Chalo ghar chale"
-    },
-    {
-        id: 3,
-        title: "Placement",
-        content: "Level sabke niklenge"
-    }
-];
+const app = express();
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
-//Body parsing middleware (body by defalut is undefined)
-app.use(express.urlencoded({ extended: true })); // Parse form data
+app.use(express.urlencoded({ extended: true }));
 
-//Middleware
-// let password = 1800;
-// app.use('/blogs', (req, res, next) => {
-//     if (password==800){
-//         next();
-//     }else{
-//         res.send("Bhai Passwrod galat h, you are not allowed");
-//     }
-// })
-
-
-
-
-
-// Root Route
-app.get("/", (req, res) => {
-    res.send("Hello From root Route!");
+app.get('/', (req, res) => {
+    res.send('Welcome to root Route!');
+});
+    
+app.get('/human', (req, res) => {
+    res.send('Welcome to Human Route!');
 });
 
-// CRUD Operations
-
-// CREATE Form - Display form to create a new blog
-app.get('/blogs/new', (req, res) => {
-    res.render("blogs/new");
-});
-
-
-//Read a particular blog
-app.get('/blogs/:id', (req, res) => {
-    console.log(req.params.id);
-    let foundBlog = blog.find((blog) => blog.id == req.params.id);
-    res.render('blogs/show', { blog: foundBlog });    
-});
-
-
-// CREATE - Create a new blog
-app.post('/blogs', (req, res) => {
-    const { title, author, content } = req.body;
-    const newBlogPost = {
-        id: Date.now(),
-        title,
-        author,
-        content
-    };
-    blog.push(newBlogPost);
-    res.redirect('/blogs');
-});
-
-
-// READ - Get all blogs
 app.get('/blogs', (req, res) => {
-    res.render('blogs/index', { blog });
+    res.render('blogs/index', { blogs });
 });
+
+app.get('/blogs/new', (req, res) => {
+    res.render('blogs/new');
+});
+
+app.post('/blogs', (req, res) => {
+    let { author, comment } = req.body;
+    blogs.push({ id: blogs.length + 1 ,author, comment });
+    res.send("Blog created successfully!");
+});
+
+// Particular Blog
+
+app.get('/blogs/:idd', (req, res) => {
+    let { idd } = req.params;
+    let foundblog = blogs.find((blog) => blog.id == idd);
+    res.render('blogs/show', { foundblog });
+});
+
+
+// CRUD
+// Create, Read, Update, Delete
+
+const blogs = [
+    {
+        id: 1,
+        author: 'Ujjwal',
+        comment: "Aaj kamaenga to kl bathke khaenge",
+    },
+    {
+        id: 2,
+        author: 'Arpit',
+        comment: "Aaj khaenge to kl kamaenge",
+    },
+    {
+        id: 3,
+        author: 'Anshul',
+        comment: "Aaj khaenge to kl khaenge",
+    },
+    {
+        id: 4,
+        author: 'Aryan',
+        comment: "Papa woh cycle ki toh....",
+    }
+]
 
 const PORT = 8080;
 app.listen(PORT, () => {
