@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Blog</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>✏ Edit Blog</h1>
+
+        <form action="/blogs/<%= foundblog.id %>?_method=PATCH" method="post" class="blog-form">
+
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author" value="<%= foundblog.author %>" required>
+
+            <label for="content">Comment</label>
+            <textarea name="content" id="content" required><%= foundblog.comment %></textarea>
+
+            <button type="submit" class="submit-btn">Update Blog</button>
+            <a href="/blogs" class="back-btn">⬅ Back</a>
+        </form>
+        <form action="/blogs/<%= foundblog.id %>?_method=DELETE" method="post" class="delete-form">
+            <button type="submit" class="delete-btn">🗑 Delete Blog</button>
+        </form>
+
+    </div>
+</body>
+</html>
