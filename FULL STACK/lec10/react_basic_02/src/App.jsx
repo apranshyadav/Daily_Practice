@@ -1,21 +1,50 @@
+import Ap from './components/ap.jsx'
 // COMPONENT
 export function App() {
   return (
     <div>
-      <h1>Hello RaoSahab</h1>
+      <h1>Hello everyone</h1>
+      <Ap />
     </div>
   )
 }
-
-function  Div(){
+export function Div() {
   return (
     <div>
-      <h1>I am a Div</h1> 
+      <h1>I am div component</h1>
+    </div>
+  )
+}
+function Span() {
+  return (
+    <div>
+      <h1>I am div component</h1>
     </div>
   )
 }
 
-export default Div;
+export default Span;
+// import ap from './components/ap.jsx'
+
+// // COMPONENT
+// function App() {
+//   return (
+//     <div>
+//       <h1>Hello RaoSahab</h1>
+//       <ap></ap>
+//     </div>
+//   )
+// }
+
+// function  Div(){
+//   return (
+//     <div>
+//       <h1>I am a Div</h1> 
+//     </div>
+//   )
+// }
+
+// export default App;
 
 // function  Span(){
 //   return (

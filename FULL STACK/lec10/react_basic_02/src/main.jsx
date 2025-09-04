@@ -4,20 +4,21 @@ import './index.css'
 // import Div from './App.jsx'
 // import Span from './App.jsx'
 // import Divvv from './App.jsx'
-import App from './App.jsx'
-import Cat from './components/Cat.jsx'
-import Dog from './components/Dog.jsx' 
+import Span, {Div, App} from './App.jsx'
+// import Cat from './components/Cat.jsx'
+// import Dog from './components/Dog.jsx' 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <App /> */}
     {/* <App></App> */}
-    {/* <Div /> */}
-    {/* <div></div> */}
-    {/* <Span /> */}
+    <Div />
+    
+    <Span />
     {/* <Divvv /> */}
     <App />
-    <Cat />
-    <Dog />
+
+    {/* <Cat />
+    <Dog /> */}
   </StrictMode>,
 )
