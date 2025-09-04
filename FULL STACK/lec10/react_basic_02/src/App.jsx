@@ -1,4 +1,5 @@
-import Ap from './components/ap.jsx'
+import { Ap } from "./components/ap";
+
 // COMPONENT
 export function App() {
   return (
@@ -24,6 +25,34 @@ function Span() {
 }
 
 export default Span;
+
+
+// import Ap from './components/ap.jsx'
+// // COMPONENT
+// export function App() {
+//   return (
+//     <div>
+//       <h1>Hello everyone</h1>
+//       <Ap />
+//     </div>
+//   )
+// }
+// export function Div() {
+//   return (
+//     <div>
+//       <h1>I am div component</h1>
+//     </div>
+//   )
+// }
+// function Span() {
+//   return (
+//     <div>
+//       <h1>I am div component</h1>
+//     </div>
+//   )
+// }
+
+// export default Span;
 // import ap from './components/ap.jsx'
 
 // // COMPONENT
