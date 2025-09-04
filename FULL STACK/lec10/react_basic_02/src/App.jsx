@@ -1,5 +1,5 @@
 // COMPONENT
-function App() {
+export function App() {
   return (
     <div>
       <h1>Hello RaoSahab</h1>
@@ -7,7 +7,30 @@ function App() {
   )
 }
 
-export default App;
+function  Div(){
+  return (
+    <div>
+      <h1>I am a Div</h1> 
+    </div>
+  )
+}
+
+export default Div;
+
+// function  Span(){
+//   return (
+//     <div>
+//       <h1>I am a Span</h1> 
+//     </div>
+//   )
+// }
+
+// export default Span;
+
+// DEFAULT COMPONENT
+// You can have only one default component in a file
+// You can have multiple named components in a file
+
 
 
 
