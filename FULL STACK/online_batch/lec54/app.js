@@ -18,7 +18,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/shop-app')
 })
  
 
-
+app.engine('ejs',ejsMate);
 app.set('view engine','ejs');
 //views folder
 app.set('views',path.join(__dirname, 'views'));
