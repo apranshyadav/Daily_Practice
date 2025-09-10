@@ -24,7 +24,7 @@ app.set('view engine','ejs');
 app.set('views',path.join(__dirname, 'views'));
 // public folder
 app.use(express.static(path.join(__dirname,'public')));
- 
+app.use(express.urlencoded({extended:true}));
 
 // Seeding database
 // seedDB()

@@ -13,3 +13,14 @@ TASK4 : ADD INITIAL DATA
 
 TASK 6 : SHOW DATA TO PAGE FROM DB
 express.Router() --> mini instance
+
+TASK 7 : ADDED A CARD FOR PRODUCTS
+TASK 8 : ADDED A NAVBAR
+
+TASK 9 : CRUD (uSE RESTFUL TABLE)
+
+        1. CREATE
+
+        2. REMOVE
+
+        3. 
