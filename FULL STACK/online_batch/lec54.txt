@@ -1,0 +1,15 @@
+TASK 1: BASIC SERVER CREATED AND CHECKED
+
+TASK2 : DB TO BE CONNECTED
+         SERVER+DB (INTERACT)
+
+TASK3 : DATA IN DB 
+        make collection : Products
+
+TASK4 : ADD INITIAL DATA
+        insertMany([arr])
+        arr(products)
+        dummy data/ initial data - Seed.js
+
+TASK 6 : SHOW DATA TO PAGE FROM DB
+express.Router() --> mini instance
