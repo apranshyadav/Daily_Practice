@@ -3,6 +3,8 @@ const app = express();
 const path = require('path');
 const seedDB = require('./seed')
 const productRoutes = require('./routes/product')
+const ejsMate = require('ejs-mate')
+
 
 // mongoose connection
 const mongoose = require('mongoose');
