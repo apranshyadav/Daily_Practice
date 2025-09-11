@@ -4,6 +4,7 @@ const path = require('path');
 const seedDB = require('./seed')
 const productRoutes = require('./routes/product')
 const ejsMate = require('ejs-mate')
+const methodOverride = require('method-override')
 
 
 // mongoose connection
@@ -25,7 +26,7 @@ app.set('views',path.join(__dirname, 'views'));
 // public folder
 app.use(express.static(path.join(__dirname,'public')));
 app.use(express.urlencoded({extended:true}));
-
+app.use(methodOverride('_method'))
 // Seeding database
 // seedDB()
 
