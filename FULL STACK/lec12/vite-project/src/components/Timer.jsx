@@ -8,7 +8,7 @@ const Timer = () => {
       setCount((prev) => prev + 1);
     }, 1000);
 
-    // Cleanup on unmount
+    // Cleanup function which executes between two re-renders
     return () => clearInterval(interval);
   }, []);
 
