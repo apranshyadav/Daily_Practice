@@ -12,6 +12,12 @@ const Person = () => {
         setDog(Math.floor(Math.random() * 10)); 
     }
 
+    let [inp, setInp] = useState('');
+    function handleInput(e){
+        setInp(e.target.value)
+    }
+
+
     // Child component
     // function Chotu({ naam }) {
     //     return <h1>Chai leke aaya malik: {naam}</h1>;
@@ -20,7 +26,7 @@ const Person = () => {
 
     return (
         <div>
-            
+            <input onChange={handleInput} type='text' value={inp} />
             <Chotu naam={dog} />
             <button onClick={changeDog}>Change Dog</button>
             <Chotu naam="Chotu" />
