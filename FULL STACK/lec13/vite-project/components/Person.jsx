@@ -1,8 +1,37 @@
-import React, { memo, useState } from 'react';
+import React, { memo, useMemo, useState } from 'react';
 
 const Chotu = memo(function ({ naam }) {
         return <h1>Chai leke aaya malik: {naam}</h1>;
 });
+
+function UseMemo(){
+    const [inp, setInp] = useState(0);
+    const [count, setCount] = useState(0);
+    let ans = 0;
+    let out = useMemo(()=>{
+        for(let item=1; item<=Number(inp); item++){ 
+            console.log('loop chala');
+            ans+=item;
+        }
+        return ans
+    },[inp]);
+
+    console.log("Ans is: ", out);
+
+    
+    function handleInput(e){
+        setInp(e.target.value);
+    }
+
+     return (
+        <div>
+            <input onChange={handleInput} type="text" value={inp} />
+            <h1>Ans: {ans}</h1>
+            <button onClick={() => setCount(count + 1)}>Counter: {count}</button>
+        </div>
+    );
+
+}
 
 const Person = () => {
     const [dog, setDog] = useState("Simba");
@@ -37,4 +66,5 @@ const Person = () => {
     );
 };
 
-export default Person;
+// export default Person;
+export default UseMemo;
