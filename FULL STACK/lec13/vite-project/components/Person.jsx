@@ -1,4 +1,8 @@
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
+
+const Chotu = memo(function ({ naam }) {
+        return <h1>Chai leke aaya malik: {naam}</h1>;
+});
 
 const Person = () => {
     const [dog, setDog] = useState("Simba");
@@ -9,9 +13,10 @@ const Person = () => {
     }
 
     // Child component
-    function Chotu({ naam }) {
-        return <h1>Chai leke aaya malik: {naam}</h1>;
-    }
+    // function Chotu({ naam }) {
+    //     return <h1>Chai leke aaya malik: {naam}</h1>;
+    // }
+    
 
     return (
         <div>
