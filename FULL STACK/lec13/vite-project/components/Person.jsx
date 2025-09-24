@@ -1,8 +1,31 @@
 import React, { memo, useMemo, useState } from 'react';
 
+
+
+const UseCallback = () => {
+    const [count, setCount] = React.useState(0);
+    let a = function() {console.log("Chai launga")};
+    return (
+        <div>
+            <Chotu chai={a} />
+            <button onClick={() => setCount(count + 1)}>Counter: {count}</button>
+        </div>
+    );
+}
+
 const Chotu = memo(function ({ naam }) {
-        return <h1>Chai leke aaya malik: {naam}</h1>;
+    console.log("Chotu rendered");
+    return <h1>Chai leke aaya malik: {naam}</h1>;
 });
+
+// const Chotu = memo(({ chai }) => {
+    
+//     return (
+//         <h1>mai launga chai:{chai}</h1>
+//     );
+// });
+
+
 
 function UseMemo(){
     const [inp, setInp] = useState(0);
@@ -67,4 +90,5 @@ const Person = () => {
 };
 
 // export default Person;
-export default UseMemo;
+// export default UseMemo;
+export default UseCallback;
