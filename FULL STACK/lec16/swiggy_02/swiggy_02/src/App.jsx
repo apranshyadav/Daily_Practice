@@ -7,7 +7,6 @@ import Apicalling from './components/Apicalling'
 function App() {
   return (
     <div>
-      <Apicalling />
       <Header />
       <Body  />
       <Footer />
