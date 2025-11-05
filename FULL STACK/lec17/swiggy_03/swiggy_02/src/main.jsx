@@ -6,18 +6,23 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const appRouter = createBrowserRouter([
   {
-    path: 'about',
-    element: <About/>
-  },
-  {
-    path: 'home',
-    element: <Home/>
-  },
-  {
-    path: 'body',
-    element: <Body/>
+    path: '/',
+    element: <App/>,
+    children:[
+      {
+      path: '/help',
+      element: <Help/>
+    },
+    {
+      path: '/signin',
+      element: <Signin/>
+    },
+    {
+      path: '/offer',
+      element: <Offer/>
+    }
+    ]
   }
-
 ]);
 
 createRoot(document.getElementById('root')).render(

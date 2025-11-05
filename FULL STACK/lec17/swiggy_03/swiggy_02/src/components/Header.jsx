@@ -4,6 +4,7 @@ import { BiSolidOffer } from "react-icons/bi";
 import { IoIosHelpBuoy } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
 import { FaCartShopping } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -13,6 +14,7 @@ function Header() {
             <ul className='flex'>
                <div className='flex mx-4'>
                     <span className='text-2xl mt-1'> <IoSearch /> </span>
+                    
                     <li className='ml-4 text-2xl'>Search</li>
                </div>
                <div className='flex mx-4'>
