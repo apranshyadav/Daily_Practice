@@ -14,24 +14,35 @@ function Header() {
             <ul className='flex'>
                <div className='flex mx-4'>
                     <span className='text-2xl mt-1'> <IoSearch /> </span>
-                    
                     <li className='ml-4 text-2xl'>Search</li>
                </div>
                <div className='flex mx-4'>
                     <span className='text-2xl mt-1'> <BiSolidOffer /> </span>
-                    <li className='ml-4 text-2xl'>Offers</li>
+                    <link to = '/offers'>
+                        <li className='ml-4 text-2xl'>Offers</li>
+                    </link>
+
                </div>
                 <div className='flex mx-4'>
                     <span className='text-2xl mt-1'> <IoIosHelpBuoy/> </span>
-                    <li className='ml-4 text-2xl'>Help</li>
+                    <link to = '/help'>
+                        <li className='ml-4 text-2xl'>Help</li>
+                    </link>
+
                 </div>
                 <div className='flex mx-4'>
                     <span className='text-2xl mt-1'> <CgProfile /></span>
-                    <li className='ml-4 text-2xl'>Signin</li>
+                    <link to = '/signin'>
+                        <li className='ml-4 text-2xl'>Signin</li>
+                    </link>
+
                 </div>
                 <div className='flex mx-4'>
                     <span className='text-2xl mt-1'> <FaCartShopping/> </span>
-                    <li className='ml-4 text-2xl'>Cart</li>
+                    <link to = '/cart'>
+                        <li className='ml-4 text-2xl'>Cart</li>
+                    </link>
+
                 </div>
             </ul>
         </nav>
